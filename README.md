@@ -118,12 +118,12 @@ You will see something like:
 3. Click on <b>Create function</b><br/><br/>
 4. Choose <b>Node.js 16.x</b> for the Runtime<br/><br/>
 5. <b>x86_64</b> for the architecture<br/><br/>
-6. Attach the previously created <b>role</b> to the Lambda function<br/>
-(you can also create a new role, but make sure that you attach the AmazonAPIGatewayInvokeFullAccess policy in IAM to it afterwards)<br/><br/>
+6. Attach the previously created <b>role</b> ("Use an existing role") to the Lambda function<br/>
+(you can also create a new role, but make sure that you attach the <b>AmazonAPIGatewayInvokeFullAccess policy</b> in IAM to it afterwards)<br/><br/>
 			</td>
 		</tr>
 	</tbody>
 </table>
 			
-7. It should end up looking like this
+7. It should end up looking like this, click on <b>"Create function"</b>:
 <img src="create_lambda_function.png" width="2048">
