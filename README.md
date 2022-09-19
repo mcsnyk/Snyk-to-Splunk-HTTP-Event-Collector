@@ -136,3 +136,8 @@ You will see something like:
 
 ---
 
+### 1.3 Setting the necessary environment variables
+1. Go to Configuration in your Lambda 
+2. Click on Environment variables
+3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): **SPLUNK_HEC_TOKEN**
+and **SPLUNK_HEC_URL**
