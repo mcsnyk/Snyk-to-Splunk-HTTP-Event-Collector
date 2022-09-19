@@ -128,4 +128,7 @@ You will see something like:
 7. It should end up looking like this:
 <img src="create_lambda_function.png" width="2048">
 
-8. Click on <b>"Create function"</b>
+8. Click on <b>"Create function"   </b>
+9. In the code section paste the function "splunk-logging.js" file!    
+
+**Alternatively we can immediately go to [Splunk's development site](https://dev.splunk.com/enterprise/docs/devtools/httpeventcollector/useawshttpcollector/createlambdafunctionnodejs/) and create a Lambda function using a Splunk blueprint:** select the "splunk-logging" blueprint option, or click [here to immediate action within AWS Lambda](https://console.aws.amazon.com/lambda/home?#/create/configure-triggers?bp=splunk-logging)
