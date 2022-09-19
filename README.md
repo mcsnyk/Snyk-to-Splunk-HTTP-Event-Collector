@@ -29,7 +29,7 @@ We are going to use AWS Lambda, because it's a relatively cost-effective and eff
 2. Navigate to <b>IAM</b><br/><br/>
 3. Click on <b>Roles/Create role</b><br/><br/>
 4. Select for Trusted entity type: <b>AWS Service</b>, for Use case:<b>Lambda</b>, then click on Next<br/><br/>
-5. Search for <b>AmazonAPIGatewayInvokeFullAccess</b> and <b>AWSLambdaBasicExecutionRole</b> among the Permissions policies, then click on Next.<br/>
+5. Search for <b>AmazonAPIGatewayInvokeFullAccess</b> (we'll be interacting with the API Gateway) and <b>AWSLambdaBasicExecutionRole</b> among the Permissions policies, then click on Next.<br/>
 			</td>
 		</tr>
 	</tbody>
@@ -109,9 +109,9 @@ You will see something like:
 			<td> <img src="lambda.png" width="130"></td>
 			<td>
 1. Go to the AWS Console<br/><br/>
-2. Navigate to Lambda<br/><br/>
-3. Click on Create function<br/><br/>
-4. Choose Node.js 16.x for the Runtime<br/><br/>
-5. x86_64 for the architecture<br/><br/>
-6. Add or create a role with the policy AmazonAPIGatewayInvokeFullAccess as we will be interacting with the API Gateway<br/><br/></td>
+2. Navigate to <b>Lambda</b><br/><br/>
+3. Click on <b>Create function</b><br/><br/>
+4. Choose <b>Node.js 16.x</b> for the Runtime<br/><br/>
+5. <b>x86_64</b> for the architecture<br/><br/>
+6. Attach the previously created <b>role</b> to the Lambda function<br/><br/></td>
 7. It should end up looking like this
