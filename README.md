@@ -19,6 +19,7 @@ I recommend the following resources:
 - [1. AWS Setup](#1-aws-setup)<br/>
 	- [1.1 Create a new IAM role (upfront) for the AWS Lambda function](#11-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
 	- [1.2 Create a Lambda function](#12-create-a-lambda-function)<br/>
+	- [1.3 Setting the necessary environment variables](#13-setting-the-necessary-environment-variables)<br/>
 - 
 ## 1. AWS Setup
 Note: The Lambda and API Gateway have to be configured in the same region
@@ -128,7 +129,7 @@ You will see something like:
 7. It should end up looking like this:
 <img src="create_lambda_function.png" width="2048">
 
-8. Click on <b>"Create function"   </b>
+8. Click on <b>"Create function"</b>
 9. In the code section paste the function "splunk-logging.js" file!    
 
 ---
@@ -139,5 +140,5 @@ You will see something like:
 ### 1.3 Setting the necessary environment variables
 1. Go to Configuration in your Lambda 
 2. Click on Environment variables
-3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): **SPLUNK_HEC_TOKEN**
-and **SPLUNK_HEC_URL**
+3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
+**SPLUNK_HEC_TOKEN** and **SPLUNK_HEC_URL**. Don't worry, we'll give them values in a minute.<br/>
