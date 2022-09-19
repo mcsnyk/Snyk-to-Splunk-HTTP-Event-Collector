@@ -20,6 +20,7 @@ Note: The Lambda and API Gateway have to be configured in the same region
 We are going to use AWS Lambda, because it's a relatively cost-effective and efficient way to run code on events, for example when there is a new Snyk vulnerability.
 
 ### 1.1 Create a new IAM role (upfront) for the AWS Lambda function
+![](iam.webp)
 1. Go to the AWS Console
 2. Navigate to IAM
 3. Click on Roles/Create role
