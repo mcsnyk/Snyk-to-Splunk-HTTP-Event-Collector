@@ -126,4 +126,4 @@ You will see something like:
 </table>
 			
 7. It should end up looking like this
-<img src="create_lambda_function.png" width="300">
+<img src="create_lambda_function.png" width="2048">
