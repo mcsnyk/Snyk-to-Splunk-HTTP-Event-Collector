@@ -15,6 +15,11 @@ I recommend the following resources:
 - Snyk account with Organization Admin access<br/>
 - Splunk Clound account - note: **not the same** as Splunk Observability Cloud!<br/>
 
+## List of content
+- [1. AWS Setup](#1-aws-setup)<br/>
+	- [1.1 Create a new IAM role (upfront) for the AWS Lambda function]()<br/>
+	- [1.2 Create a Lambda function]()<br/>
+- 
 ## 1. AWS Setup
 Note: The Lambda and API Gateway have to be configured in the same region
 We are going to use AWS Lambda, because it's a relatively cost-effective and efficient way to run code on events, for example when there is a new Snyk vulnerability.
