@@ -148,14 +148,21 @@ The configuration should look like this:
 </details>
 
 ### 1.3 Setting the necessary environment variables
-1. Go to Configuration in your Lambda 
-2. Click on Environment variables
-3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
-**SPLUNK_HEC_TOKEN** and **SPLUNK_HEC_URL**. Don't worry, we'll give them values in a minute.<br/>
+In order to interact with Splunk and the Splunk HTTP event collector, we need to set two environment variables:
 
 **SPLUNK_HEC_URL**: URL address for your Splunk HTTP event collector endpoint.
 Default port for event collector is 8088. Example: https://host.com:8088/services/collector
 
 **SPLUNK_HEC_TOKEN**: Token for your Splunk HTTP event collector.
 To create a new token for this Lambda function, refer to Splunk Docs:
-http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token
+http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token   
+
+<details>
+<summary><b>Implementation steps</b></summary>
+<br/>
+1. Go to Configuration in your Lambda 
+2. Click on Environment variables
+3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
+**SPLUNK_HEC_TOKEN** and **SPLUNK_HEC_URL**. Don't worry, we'll give them values in a minute.<br/>
+</details>
+
