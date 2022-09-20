@@ -29,7 +29,7 @@ We are going to use AWS Lambda, because it's a relatively cost-effective and eff
 
 <details>
 <summary>Implementation steps here</summary>
-<br>
+<br/>
 	<table border="0">
 		<tbody>
 			<tr>
@@ -40,6 +40,7 @@ We are going to use AWS Lambda, because it's a relatively cost-effective and eff
 3. Click on <b>Roles/Create role</b><br/><br/>
 4. Select for Trusted entity type: <b>AWS Service</b>, for Use case:<b>Lambda</b>, then click on Next<br/><br/>
 5. Search for <b>AmazonAPIGatewayInvokeFullAccess</b> (we'll be interacting with the API Gateway) and <b>AWSLambdaBasicExecutionRole</b> among the Permissions policies, then click on Next.<br/>
+6. Add a (custom) name for the role, then click on <b>Create role</b><br/>
 				</td>
 			</tr>
 		</tbody>
@@ -74,8 +75,7 @@ You will see something like:
 }
 ```
 
-6. Add a (custom) name for the role, then click on Create role
-7. You can check, your roles should look like these (AWS build-in roles)
+You can check, your roles should look like these (AWS build-in roles)
 
 ```json
 //AmazonAPIGatewayInvokeFullAccess
