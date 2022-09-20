@@ -153,6 +153,20 @@ Our intention is to get data in Splunk Cloud via monitoring. We'll leverage the 
 It's a handy solution, because we can use the Splunk .NET and Java logging libraries or any standard HTTP Client that lets us send data in JavaScript Object Notation (JSON) format.<br/>       
 The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. We can change this port, as well as disable HTTPS.<br/>  
 
+<details>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
+<br/>
+1. Log in to your <b>Splunk Cloud account</b> (you receive the login information via email, like the Splunk Cloud Platform URL, the Username and a Temporary Password)<br/>
+<img src="resources_img/splunk_login_information.png" width="400"><br/><br/>
+2. After a succesful log in, navigate to <b>Settings</b> in the top menu bar and select the Add Data icon!<br/>
+<img src="resources_img/splunk_add_data.png" width="400"><br/><br/>
+3. In the <b>Or get data in with the following methods </b> section choose Monitor<br/>
+4. Among the many options choose <b>HTTP Event Collector</b><br/>
+5. Give a name for your Token and select <b>Enable indexer acknowledgement</b><br/>
+<img src="resources_img/splunk_httpec_setup.png" width="2048"><br/><br/>
+</details>
+
+
 ### 1.4 Setting the necessary environment variables
 In order to interact with Splunk and the Splunk HTTP event collector, we need to set two environment variables:
 
