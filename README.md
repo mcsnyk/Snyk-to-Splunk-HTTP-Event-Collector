@@ -34,7 +34,7 @@ To start with, we need to create an IAM role that we can assign to the AWS Lambd
 	<table border="0">
 		<tbody>
 			<tr>
-				<td> <img src="iam.webp" width="130"></td>
+				<td> <img src="resources_img/iam.webp" width="130"></td>
 				<td>
 1. Go to the AWS Console<br/><br/>
 2. Navigate to <b>IAM</b><br/><br/>
@@ -118,7 +118,7 @@ You can check, your roles should look like these (AWS build-in roles)
 <table border="0">
 	<tbody>
 		<tr>
-			<td> <img src="lambda.png" width="130"></td>
+			<td> <img src="resources_img/lambda.png" width="130"></td>
 			<td>
 1. Go to the AWS Console<br/><br/>
 2. Navigate to <b>Lambda</b><br/><br/>
@@ -133,7 +133,7 @@ You can check, your roles should look like these (AWS build-in roles)
 </table>
 			
 7. It should end up looking like this:
-<img src="create_lambda_function.png" width="2048">
+<img src="resources_img/create_lambda_function.png" width="2048">
 
 8. Click on <b>"Create function"</b>
 9. In the code section paste the function "splunk-logging.js" file!    
