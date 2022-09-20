@@ -26,7 +26,7 @@ Note: The Lambda and API Gateway have to be configured in the same region
 We are going to use AWS Lambda, because it's a relatively cost-effective and efficient way to run code on events, for example when there is a new Snyk vulnerability.
 
 ### 1.1 Create a new IAM role (upfront) for the AWS Lambda function
-
+To start with, we need to create an IAM role that we can assign to the AWS Lambda function. We need to provide basic execution roles and permissions to invoke an API Gateway which we'll be interacting with. If you're interested in the implementation, click below.  
 <details>
 <summary>Implementation steps here</summary>
 <br/>
@@ -38,7 +38,7 @@ We are going to use AWS Lambda, because it's a relatively cost-effective and eff
 1. Go to the AWS Console<br/><br/>
 2. Navigate to <b>IAM</b><br/><br/>
 3. Click on <b>Roles/Create role</b><br/><br/>
-4. Select for Trusted entity type: <b>AWS Service</b>, for Use case:<b>Lambda</b>, then click on Next<br/><br/>
+4. Select for Trusted entity type: <b>AWS Service</b>, for Use case: <b>Lambda</b>, then click on Next<br/><br/>
 5. Search for <b>AmazonAPIGatewayInvokeFullAccess</b> (we'll be interacting with the API Gateway) and <b>AWSLambdaBasicExecutionRole</b> among the Permissions policies, then click on Next.<br/><br/>
 6. Add a (custom) name for the role, then click on <b>Create role</b><br/>
 				</td>
