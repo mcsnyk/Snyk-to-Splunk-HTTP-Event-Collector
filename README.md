@@ -131,6 +131,8 @@ As mentioned above
 5. <b>x86_64</b> for the architecture<br/><br/>
 6. Attach the previously created <b>role</b> ("Use an existing role") to the Lambda function<br/>
 (you can also create a new role, but make sure that you attach the <b>AmazonAPIGatewayInvokeFullAccess policy</b> in IAM to it afterwards)<br/><br/>
+8. Click on <b>"Create function"</b><br/><br/>
+9. In the code section paste the function "[splunk-logging.js](https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/scripts/splunk-logging.js)" file!<br/>  
 			</td>
 		</tr>
 	</tbody>
@@ -140,8 +142,6 @@ As mentioned above
 The configuration should look like this:
 <img src="resources_img/create_lambda_function.png" width="2048">
 
-8. Click on <b>"Create function"</b>
-9. In the code section paste the function "[splunk-logging.js](https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/scripts/splunk-logging.js)" file!    
 
 ---
 :genie: **Alternatively we can immediately go to [Splunk's development site](https://dev.splunk.com/enterprise/docs/devtools/httpeventcollector/useawshttpcollector/createlambdafunctionnodejs/) and create a Lambda function using a Splunk blueprint:** select the "splunk-logging" blueprint option, or click [here to immediate action within AWS Lambda](https://console.aws.amazon.com/lambda/home?#/create/configure-triggers?bp=splunk-logging)
