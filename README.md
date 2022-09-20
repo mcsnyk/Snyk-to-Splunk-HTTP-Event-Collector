@@ -3,7 +3,6 @@ Connect Snyk to Splunk by leveraging the Splunk HTTP Event Collector and visuali
 
 ## Useful resources   
 I recommend the following resources:
-- Snyk API masterclass: [Connecting Snyk to Slack with AWS Lambda](https://docs.google.com/document/d/1c-J3UnaJacPpUJwnCUIIATpmuRA4ekbjc5YQRS0h3gY/edit#heading=h.dfekck1qh08m), *(Fredrik Klasén, Eric Fernandez)*
 - Forward Snyk Vulnerability data [to Splunk Observability Cloud](https://www.kimpel.com/post/forward-snyk-vuln-data-to-splunk/), *(Harry Kimpel)* 
 - Snyk [webhook subscription](https://github.com/harrykimpel/snyk-webhook-subscription/), *(Harry Kimpel)*
 
