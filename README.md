@@ -18,7 +18,8 @@ I recommend the following resources:
 - [1. AWS Setup](#1-aws-setup)<br/>
 	- [1.1 Create a new IAM role (upfront) for the AWS Lambda function](#11-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
 	- [1.2 Create a Lambda function](#12-create-a-lambda-function)<br/>
-	- [1.3 Setting the necessary environment variables](#13-setting-the-necessary-environment-variables)<br/>
+	- [1.3 Create a Lambda function](#13-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
+	- [1.4 Setting the necessary environment variables](#14-setting-the-necessary-environment-variables)<br/>
 - 
 ## 1. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
@@ -147,7 +148,12 @@ The configuration should look like this:
 <img src="resources_img/create_lambda_function.png" width="2048">
 </details>
 
-### 1.3 Setting the necessary environment variables
+### 1.3 Setting up the HTTP Event Collector in Splunk Cloud
+Our intention is to get data in Splunk Cloud via monitoring. We'll leverage the Splunk HTTP Event Collector, which is an endpoint that lets developers send application events directly to the Splunk platform via HTTP or HTTPS using a token-based authentication model.<br/>  
+It's a handy solution, because we can use the Splunk .NET and Java logging libraries or any standard HTTP Client that lets us send data in JavaScript Object Notation (JSON) format.<br/>       
+The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. We can change this port, as well as disable HTTPS.<br/>  
+
+### 1.4 Setting the necessary environment variables
 In order to interact with Splunk and the Splunk HTTP event collector, we need to set two environment variables:
 
 **SPLUNK_HEC_URL**: URL address for your Splunk HTTP event collector endpoint.
@@ -160,7 +166,7 @@ http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector
 <details>
 <summary><b>:hammer_and_wrench: Implementation steps</b></summary>
 <br/>
-1. Go to <b>Configuration</b> in your Lambda<br/><br/> 
+1. Go to <b>Configuration</b> in your AWS Lambda<br/><br/> 
 2. Click on <b>Environment</b> variables<br/><br/>
 3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
 **SPLUNK_HEC_TOKEN** and **SPLUNK_HEC_URL**. Don't worry, we'll give them values in a minute.<br/>
