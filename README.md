@@ -115,7 +115,12 @@ You can check, your roles should look like these (AWS build-in roles)
 ```
 
 ### 1.2 Create a Lambda function
-As mentioned above 
+---
+:genie: **The fastest and most convenient way is to go to [Splunk's development site](https://dev.splunk.com/enterprise/docs/devtools/httpeventcollector/useawshttpcollector/createlambdafunctionnodejs/) and create a Lambda function using a Splunk blueprint:** select the "splunk-logging" blueprint option, or click [here to immediate action within AWS Lambda](https://console.aws.amazon.com/lambda/home?#/create/configure-triggers?bp=splunk-logging)
+
+---
+
+Alternatively, of course we can create own our JavaScript code as described below.
 <details>
 <summary><b>Implementation steps</b></summary>
 <br/>
@@ -137,16 +142,10 @@ As mentioned above
 		</tr>
 	</tbody>
 </table>
-</details>
 
 The configuration should look like this:
 <img src="resources_img/create_lambda_function.png" width="2048">
-
-
----
-:genie: **Alternatively we can immediately go to [Splunk's development site](https://dev.splunk.com/enterprise/docs/devtools/httpeventcollector/useawshttpcollector/createlambdafunctionnodejs/) and create a Lambda function using a Splunk blueprint:** select the "splunk-logging" blueprint option, or click [here to immediate action within AWS Lambda](https://console.aws.amazon.com/lambda/home?#/create/configure-triggers?bp=splunk-logging)
-
----
+</details>
 
 ### 1.3 Setting the necessary environment variables
 1. Go to Configuration in your Lambda 
