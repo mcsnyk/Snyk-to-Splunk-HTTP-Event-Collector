@@ -29,7 +29,7 @@ We are going to use AWS Lambda, because it's a relatively cost-effective and eff
 ### 1.1 Create a new IAM role (upfront) for the AWS Lambda function
 To start with, we need to create an IAM role that we can assign to the AWS Lambda function. We need to provide basic execution roles and permissions to invoke an API Gateway which we'll be interacting with. If you're interested in the implementation, click below.  
 <details>
-<summary><b>Implementation steps</b></summary>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
 <br/>
 	<table border="0">
 		<tbody>
@@ -122,7 +122,7 @@ You can check, your roles should look like these (AWS build-in roles)
 
 Alternatively, of course we can create own our JavaScript code as described below.
 <details>
-<summary><b>Implementation steps</b></summary>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
 <br/>
 	<table border="0">
 	<tbody>
@@ -158,7 +158,7 @@ To create a new token for this Lambda function, refer to Splunk Docs:
 http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token   
 
 <details>
-<summary><b>Implementation steps</b></summary>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
 <br/>
 1. Go to Configuration in your Lambda 
 2. Click on Environment variables
