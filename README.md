@@ -166,7 +166,7 @@ The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. W
 <img src="resources_img/splunk_httpec_setup.png" width="1024"><br/><br/>
 6. On the Input Settings site the source type should be <b>automatic</b>, and we can allow the <b>main </b>index (The Splunk platform stores incoming data as events in the selected index):<br/>
 <img src="resources_img/splunk_allow_main_index.png" width="1024"><br/><br/>
-7. After reviewing all the information, we're done, you should see the generated Token Value:<br/>
+7. After reviewing all the information, we're done, you should see the generated Token Value (in this setup on AWS Lambda it is called <b>SPLUNK_HEC_TOKEN</b>):<br/>
 <img src="resources_img/splunk_generated_token.png" width="800"><br/><br/>
 </details>
 
