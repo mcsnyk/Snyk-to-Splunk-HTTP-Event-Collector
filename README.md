@@ -39,7 +39,7 @@ We are going to use AWS Lambda, because it's a relatively cost-effective and eff
 2. Navigate to <b>IAM</b><br/><br/>
 3. Click on <b>Roles/Create role</b><br/><br/>
 4. Select for Trusted entity type: <b>AWS Service</b>, for Use case:<b>Lambda</b>, then click on Next<br/><br/>
-5. Search for <b>AmazonAPIGatewayInvokeFullAccess</b> (we'll be interacting with the API Gateway) and <b>AWSLambdaBasicExecutionRole</b> among the Permissions policies, then click on Next.<br/>
+5. Search for <b>AmazonAPIGatewayInvokeFullAccess</b> (we'll be interacting with the API Gateway) and <b>AWSLambdaBasicExecutionRole</b> among the Permissions policies, then click on Next.<br/><br/>
 6. Add a (custom) name for the role, then click on <b>Create role</b><br/>
 				</td>
 			</tr>
