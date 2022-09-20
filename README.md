@@ -22,7 +22,9 @@ I recommend the following resources:
 	- [1.3 Setting the necessary environment variables](#13-setting-the-necessary-environment-variables)<br/>
 - 
 ## 1. AWS Setup
-Note: The Lambda and API Gateway have to be configured in the same region
+In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
+
+Note: The AWS Lambda function and the API Gateway have to be configured in the same region.   
 We are going to use AWS Lambda, because it's a relatively cost-effective and efficient way to run code on events, for example when there is a new Snyk vulnerability.
 
 ### 1.1 Create a new IAM role (upfront) for the AWS Lambda function
