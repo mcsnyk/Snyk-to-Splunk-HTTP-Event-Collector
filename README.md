@@ -115,7 +115,11 @@ You can check, your roles should look like these (AWS build-in roles)
 ```
 
 ### 1.2 Create a Lambda function
-<table border="0">
+As mentioned above 
+<details>
+<summary><b>Implementation steps</b></summary>
+<br/>
+	<table border="0">
 	<tbody>
 		<tr>
 			<td> <img src="resources_img/lambda.png" width="130"></td>
@@ -131,12 +135,13 @@ You can check, your roles should look like these (AWS build-in roles)
 		</tr>
 	</tbody>
 </table>
-			
-7. It should end up looking like this:
+</details>
+
+The configuration should look like this:
 <img src="resources_img/create_lambda_function.png" width="2048">
 
 8. Click on <b>"Create function"</b>
-9. In the code section paste the function "splunk-logging.js" file!    
+9. In the code section paste the function "[splunk-logging.js](https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/scripts/splunk-logging.js)" file!    
 
 ---
 :genie: **Alternatively we can immediately go to [Splunk's development site](https://dev.splunk.com/enterprise/docs/devtools/httpeventcollector/useawshttpcollector/createlambdafunctionnodejs/) and create a Lambda function using a Splunk blueprint:** select the "splunk-logging" blueprint option, or click [here to immediate action within AWS Lambda](https://console.aws.amazon.com/lambda/home?#/create/configure-triggers?bp=splunk-logging)
@@ -148,3 +153,10 @@ You can check, your roles should look like these (AWS build-in roles)
 2. Click on Environment variables
 3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
 **SPLUNK_HEC_TOKEN** and **SPLUNK_HEC_URL**. Don't worry, we'll give them values in a minute.<br/>
+
+**SPLUNK_HEC_URL**: URL address for your Splunk HTTP event collector endpoint.
+Default port for event collector is 8088. Example: https://host.com:8088/services/collector
+
+**SPLUNK_HEC_TOKEN**: Token for your Splunk HTTP event collector.
+To create a new token for this Lambda function, refer to Splunk Docs:
+http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token
