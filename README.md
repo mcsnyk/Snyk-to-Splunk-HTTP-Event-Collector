@@ -160,8 +160,8 @@ http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector
 <details>
 <summary><b>:hammer_and_wrench: Implementation steps</b></summary>
 <br/>
-1. Go to Configuration in your Lambda 
-2. Click on Environment variables
+1. Go to <b>Configuration</b> in your Lambda<br/><br/> 
+2. Click on <b>Environment</b> variables<br/><br/>
 3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
 **SPLUNK_HEC_TOKEN** and **SPLUNK_HEC_URL**. Don't worry, we'll give them values in a minute.<br/>
 </details>
