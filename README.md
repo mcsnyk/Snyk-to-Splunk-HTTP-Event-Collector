@@ -18,7 +18,7 @@ I recommend the following resources:
 - [1. AWS Setup](#1-aws-setup)<br/>
 	- [1.1 Create a new IAM role (upfront) for the AWS Lambda function](#11-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
 	- [1.2 Create a Lambda function](#12-create-a-lambda-function)<br/>
-	- [1.3 Create a Lambda function](#13-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
+	- [1.3 Setting up the HTTP Event Collector in Splunk Cloud](#13-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
 	- [1.4 Setting the necessary environment variables](#14-setting-the-necessary-environment-variables)<br/>
 - 
 ## 1. AWS Setup
