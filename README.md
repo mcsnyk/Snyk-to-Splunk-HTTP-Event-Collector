@@ -30,7 +30,7 @@ We are going to use AWS Lambda, because it's a relatively cost-effective and eff
 ### 1.1 Create a new IAM role (upfront) for the AWS Lambda function
 To start with, we need to create an IAM role that we can assign to the AWS Lambda function. We need to provide basic execution roles and permissions to invoke an API Gateway which we'll be interacting with. If you're interested in the implementation, click below.  
 <details>
-<summary>Implementation steps here</summary>
+<summary><b>Implementation steps</b></summary>
 <br/>
 	<table border="0">
 		<tbody>
@@ -47,7 +47,6 @@ To start with, we need to create an IAM role that we can assign to the AWS Lambd
 			</tr>
 		</tbody>
 	</table>
-</details>
 <b>Note:</b> automatically created roles in AWS Lambda will restrict the "Resources", instead of  
 
 ```
@@ -76,6 +75,7 @@ You will see something like:
     ]
 }
 ```
+</details>
 
 You can check, your roles should look like these (AWS build-in roles)
 
