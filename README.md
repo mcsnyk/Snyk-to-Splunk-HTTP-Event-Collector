@@ -160,9 +160,9 @@ The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. W
 <img src="resources_img/splunk_login_information.png" width="400"><br/><br/>
 2. After a succesful log in, navigate to <b>Settings</b> in the top menu bar and select the Add Data icon!<br/>
 <img src="resources_img/splunk_add_data.png" width="400"><br/><br/>
-3. In the <b>Or get data in with the following methods </b> section choose Monitor<br/>
-4. Among the many options choose <b>HTTP Event Collector</b><br/>
-5. Give a name for your Token and select <b>Enable indexer acknowledgement</b><br/>
+3. In the <b>Or get data in with the following methods </b> section choose Monitor<br/><br/>
+4. Among the many options choose <b>HTTP Event Collector</b><br/><br/>
+5. Give a name for your Token and make sure that the option <b>Enable indexer acknowledgement</b> is selected!<br/><br/>
 <img src="resources_img/splunk_httpec_setup.png" width="2048"><br/><br/>
 </details>
 
