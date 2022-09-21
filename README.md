@@ -248,6 +248,9 @@ In our setup, the HEC URL is going to look like:
 https://prd-p-2mqiy.splunkcloud.com:8088/services/collector?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef
 ```
 You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef ``` part in the URL, you can find an explanation [here](https://cultivatingsoftware.wordpress.com/2018/07/24/splunk-hec-gotcha/) and [here](https://community.splunk.com/t5/Splunk-Enterprise/Why-am-I-getting-error-quot-Data-channel-is-missing-quot-using/td-p/280621).
+
+The settings should look like this:<br/>
+<img src="resources_img/AWS_env_var.png" width="2048"><br/>
      
 ### 2.4 Setting up the Lambda trigger
 Our goal is to have the Lambda function triggered by a Snyk webhook. To do this we are going to use the API Gateway provided by AWS to trigger the Lambda every time a new event is received.
@@ -268,6 +271,9 @@ Our goal is to have the Lambda function triggered by a Snyk webhook. To do this 
 		</tr>
 	</tbody>
 </table>
+      
+The settings should look like this:<br/>
+<img src="resources_img/API_gateway.png" width="2048"><br/>
 </details>
 	
 ### 1.5 :fire: Time to test our AWS connection :fire:
