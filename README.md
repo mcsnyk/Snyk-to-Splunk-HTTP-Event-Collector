@@ -268,7 +268,7 @@ Our goal is to have the Lambda function triggered by a Snyk webhook. To do this 
 		</tr>
 	</tbody>
 </table>
-
 </details>
+	
 ### 1.5 :fire: Time to test our AWS connection :fire:
 To test our connections, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk and AWS Lambda).
