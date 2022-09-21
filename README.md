@@ -329,8 +329,11 @@ Steps to add the POST Method:<br/><br/>
     }
 }
 ```
+
+Check if the mapping template and the code looks like this:
+<img src="resources_img/AWS_API_Getway_mapping_template.png" width="700"><br/><br/>
 </details>
-<br/>
+
 	
 #### 2.5.2 Deploying the POST method
 With the POST method configured now we want to deploy these changes so our Lambda can start receiving the information.<br/>
