@@ -372,9 +372,11 @@ As a <b>POST</b> request we can send a short message to AWS.
 }
 ```
 
-What we expect is the callback message from AWS Lambda:
+What we expect is the callback message from AWS Lambda:     
 
-```json
-callback("Snyk is great! Test message from AWS Lambda -> Postman", event.key1);
+```
+callback("Snyk is great! Test message from AWS Lambda -> Postman", event.key1);     
 ```
 
+Let's check Postman:    
+<img src="resources_img/postman_aws_response.png" width="500"><br/><br/>
