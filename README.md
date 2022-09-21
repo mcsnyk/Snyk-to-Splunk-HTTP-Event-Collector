@@ -344,7 +344,9 @@ Steps to deploy the POST method:<br/>
 1. Go to Resources<br/>
 2. Click on POST<br/>
 3. Then on Actions click on <b>Deploy API</b><br/>
-<img src="resources_img/AWS_API_gateway_deploy.png" width="700"><br/><br/>
+<img src="resources_img/AWS_API_gateway_deploy.png" width="250"><br/><br/>
+4. Then select the Deployment stage to deploy the new API to, in this case we can use the <b>default stage</b><br/>
+<img src="resources_img/AWS_API_gateway_deploy_stage.png" width="250"><br/><br/>
 </details>
 
 ### 2.6 :fire: Time to test our AWS Lambda function :fire:
