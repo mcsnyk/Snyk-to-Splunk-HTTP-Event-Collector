@@ -351,7 +351,7 @@ Steps to deploy the POST method:<br/>
 6. In the Lambda trigger configuration, you should see a new API endpoint. Copy this endpoint as we will need it when setting up the Snyk webhook<br/>
 <img src="resources_img/AWS_API_endpoints.png" width="500"><br/><br/>
 With the API endpoint saved we can now set up the Snyk webhook<br/>
-</details>
+</details> 
 
 ### 2.6 :fire: Time to test our AWS Lambda function :fire:
 To test our AWS Lambda function, we will use <b>Postman</b> this time, as well (feel free to use your own API platform to interact with Splunk and AWS Lambda).
