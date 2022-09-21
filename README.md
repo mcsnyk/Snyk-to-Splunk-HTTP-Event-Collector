@@ -170,8 +170,8 @@ The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. W
 <img src="resources_img/splunk_generated_token.png" width="800"><br/><br/>
 </details>
 
-### 1.4 Setting the necessary environment variables
-In order to interact with Splunk and the Splunk HTTP event collector, we need to set two environment variables:
+### 1.4 Setting the necessary environment variables for our AWS Lambda function
+In order to interact with Splunk and the Splunk HTTP event collector, we need to set two environment variables in AWS Lambda:
 
 **SPLUNK_HEC_URL**: URL address for your Splunk HTTP event collector endpoint.
 Default port for event collector is 8088. Example: https://host.com:8088/services/collector
@@ -188,7 +188,13 @@ http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector
 3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
 <b>SPLUNK_HEC_TOKEN</b> and <b>SPLUNK_HEC_URL</b>.<br/><br/>
 - We have already generated our <a href="https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/README.md#13-setting-up-the-http-event-collector-in-splunk-cloud">Splunk Token in 1.3, Step 7 </a>which we can use now.<br/><br/>
-- When configuring the URL we need to pay attention to the following things:
-	- sfsf
+- When configuring the URL we need to pay attention to the [following configurations](https://community.splunk.com/t5/Getting-Data-In/What-is-the-URI-for-HTTP-Event-Collector-for-Splunk-Cloud/m-p/425704
 </details>
+
+In our setup, the HEC URL is going to look like:
+```
+https://prd-p-2mqiy.splunkcloud.com:8088/services/collector?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef
+```
+You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef ``` part in the URL, you can find an [explanation here](https://cultivatingsoftware.wordpress.com/2018/07/24/splunk-hec-gotcha/).   
+
 
