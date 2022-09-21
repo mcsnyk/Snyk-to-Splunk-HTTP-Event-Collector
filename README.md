@@ -344,9 +344,13 @@ Steps to deploy the POST method:<br/>
 1. Go to Resources<br/>
 2. Click on POST<br/>
 3. Then on Actions click on <b>Deploy API</b><br/>
-<img src="resources_img/AWS_API_gateway_deploy.png" width="250"><br/><br/>
+<img src="resources_img/AWS_API_gateway_deploy.png" width="300"><br/><br/>
 4. Then select the Deployment stage to deploy the new API to, in this case we can use the <b>default stage</b><br/>
-<img src="resources_img/AWS_API_gateway_deploy_stage.png" width="400"><br/><br/>
+<img src="resources_img/AWS_API_gateway_deploy_stage.png" width="500"><br/><br/>
+5. We have to navigate back to our Lambda<br/>
+6. In the Lambda trigger configuration, you should see a new API endpoint. Copy this endpoint as we will need it when setting up the Snyk webhook<br/>
+<img src="resources_img/AWS_API_endpoints.png" width="500"><br/><br/>
+With the API endpoint saved we can now set up the Snyk webhook<br/>
 </details>
 
 ### 2.6 :fire: Time to test our AWS Lambda function :fire:
