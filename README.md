@@ -295,7 +295,7 @@ The payload we are going to receive is going to have a message, so we want to cr
 <table border="0">
 	<tbody>
 		<tr>
-			<td> <img src="resources_img/amazon-api-gateway.png" width="130"></td>
+			<td> <img src="resources_img/amazon-api-gateway.webp" width="130"></td>
 			<td>
 Steps to add the POST Method:<br/>
 1. Navigate to the API Gateway you have created<br/>
