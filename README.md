@@ -86,9 +86,12 @@ After sending the POST request, we should see in Postman:
 We need to navigate to the Search & Reporting site in Splunk Cloud (right menu pane):      
 <img src="resources_img/splunk_search_and_reporting.png" width="200"><br/>
 
-We shall start a new search, into the search field we need to enter ``` source="http:<name-of-your-http-event-token>" (index="main")```. Fortunately we turned on the indexing option when setting up the HTTP Event Collector, now it's easy to find our messages.
+We shall start a new search, into the search field we need to enter ``` source="http:<name-of-your-http-event-token>" (index="main")```.      
+Fortunately we turned on the indexing option when setting up the HTTP Event Collector, now it's easy to find our messages.     <br/>
 <img src="resources_img/splunk_ping_success.png" width="2048"><br/>
 
+As we can see, Splunk successfully received our message.     
+	
 ## 2. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
 
