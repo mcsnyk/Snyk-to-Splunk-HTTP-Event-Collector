@@ -197,6 +197,8 @@ https://prd-p-2mqiy.splunkcloud.com:8088/services/collector?channel=2b5fcd04-f37
 ```
 You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef ``` part in the URL, you can find an explanation [here](https://cultivatingsoftware.wordpress.com/2018/07/24/splunk-hec-gotcha/) and [here](https://community.splunk.com/t5/Splunk-Enterprise/Why-am-I-getting-error-quot-Data-channel-is-missing-quot-using/td-p/280621).
      
-We need a unique identifier which we can generate for example [here](https://www.guidgenerator.com/online-guid-generator.aspx).<br/>
+We need a unique identifier which we can generate for example [here](https://www.guidgenerator.com/online-guid-generator.aspx), this will make our communication unique by using this globally unique component (in this case message) identifiers.<br/>
 <img src="resources_img/uuid_generation.png" width="400"><br/><br/>
 
+### 1.5 :fire: Time to test our connections :fire:
+To test our connections, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk and AWS Lambda).
