@@ -28,7 +28,7 @@ I recommend the following resources:
 	- [2.5 Configuring the API Gateway](#25-configuring-the-api-gateway)<br/>
 		- [2.5.1 Setting up the method](#251-setting-up-the-method)<br/>
 		- [2.5.2 Deploying the POST method](#252-deploying-the-post-method)<br/>
-	- [2.6 Time to test our AWS Lambda function](#26-time-to-test-our-aws-lambda-function)<br/>
+	- [2.6 Time to test our AWS Lambda function](#26-fire-time-to-test-our-aws-lambda-function-fire)<br/>
 
 
 ## 1. Splunk Setup
