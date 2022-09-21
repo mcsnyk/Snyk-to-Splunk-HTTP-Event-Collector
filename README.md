@@ -17,7 +17,7 @@ I recommend the following resources:
 ## List of content
 - [1. Splunk Setup](#1-splunk-setup)<br/>
 	- [1.1 Setting up the HTTP Event Collector in Splunk Cloud](#11-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
-	- [1.2 Test our Splunk connection](#12-firetest-our-splunk-connectionfire)<br/>
+	- [1.3 Test our Splunk connection](#12-firetest-our-splunk-connectionfire)<br/>
 - [2. AWS Setup](#2-aws-setup)<br/>
 	- [2.1 Create a new IAM role (upfront) for the AWS Lambda function](#21-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
 	- [2.2 Create a Lambda function](#22-create-a-lambda-function)<br/>
@@ -48,7 +48,14 @@ The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. W
 <img src="resources_img/splunk_generated_token.png" width="800"><br/><br/>
 </details>
 
-### 1.2 :fire:Test our Splunk connection:fire: 
+### 1.2 Generate a UUID for the Splunk connection (X-Splunk-Request-Channel)
+[Sending events to HEC with indexer acknowledgment](https://docs.splunk.com/Documentation/Splunk/9.0.1/Data/AboutHECIDXAck) active is similar to sending them with the setting off. There is one crucial difference: when you have indexer acknowledgment turned on, you must specify a channel when you send events.<br/>
+The concept of a channel was introduced in HEC primarily to prevent a fast client from impeding the performance of a slow client. When you assign one channel per client, because channels are treated equally on Splunk Enterprise, one client can't affect another.<br/>
+
+In order to We need a unique identifier which we can generate for example [here](https://www.guidgenerator.com/online-guid-generator.aspx), this will make our communication unique by using this globally unique component (in this case message) identifiers.<br/>
+<img src="resources_img/uuid_generation.png" width="400"><br/><br/>
+
+### 1.3 :fire:Test our Splunk connection:fire: 
 To test our Splunk connection, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk).
 I recommend to create a new collection in Splunk, and put all the requests there.
 
@@ -58,10 +65,10 @@ Parameters of the <b>POST</b> request:
 - Headers:
 	- Content-Type: <b>application/json</b>
 	- Authorization: <b>Splunk \<your-splunk-token\></b>
-	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b><br/><br/>
+	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b><br/>
 
 It should look like:     
-<img src="resources_img/postman_splunk_header.png" width="1024"><br/><br/>
+<img src="resources_img/postman_splunk_header.png" width="1024"><br/>
 - Body: Let's just use a short sentence as an <b>httpevent</b>, like:
 ```json
 {
@@ -227,8 +234,7 @@ https://prd-p-2mqiy.splunkcloud.com:8088/services/collector?channel=2b5fcd04-f37
 ```
 You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef ``` part in the URL, you can find an explanation [here](https://cultivatingsoftware.wordpress.com/2018/07/24/splunk-hec-gotcha/) and [here](https://community.splunk.com/t5/Splunk-Enterprise/Why-am-I-getting-error-quot-Data-channel-is-missing-quot-using/td-p/280621).
      
-We need a unique identifier which we can generate for example [here](https://www.guidgenerator.com/online-guid-generator.aspx), this will make our communication unique by using this globally unique component (in this case message) identifiers.<br/>
-<img src="resources_img/uuid_generation.png" width="400"><br/><br/>
+
 
 ### 1.5 :fire: Time to test our connections :fire:
 To test our connections, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk and AWS Lambda).
