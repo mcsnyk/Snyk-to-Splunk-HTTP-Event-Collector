@@ -58,7 +58,7 @@ Parameters of the <b>POST</b> request:
 - Headers:
 	- Content-Type: <b>application/json</b>
 	- Authorization: <b>Splunk \<your-splunk-token\></b>
-	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b>
+	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b><br/>
 <img src="resources_img/postman_splunk_header.png" width="1024"><br/><br/>
 - Body: Let's just use a short sentence as an <b>httpevent</b>, like:
 ```
