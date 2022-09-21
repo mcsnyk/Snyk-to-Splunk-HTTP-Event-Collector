@@ -87,7 +87,7 @@ We need to navigate to the Search & Reporting site in Splunk Cloud (right menu p
 <img src="resources_img/splunk_search_and_reporting.png" width="200"><br/>
 
 We shall start a new search, into the search field we need to enter ``` source="http:<name-of-your-http-event-token>" (index="main")```.      
-Fortunately we turned on the indexing option when setting up the HTTP Event Collector, now it's easy to find our messages.     <br/>
+Fortunately we turned on the indexing option when setting up the HTTP Event Collector, now it's easy to find our messages.<br/><br/>
 <img src="resources_img/splunk_ping_success.png" width="2048"><br/>
 
 As we can see, Splunk successfully received our message.     
