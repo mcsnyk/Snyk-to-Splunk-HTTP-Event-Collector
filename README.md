@@ -229,7 +229,7 @@ In order to interact with Splunk and the Splunk HTTP event collector, we need to
 Default port for event collector is 8088. Example: https://host.com:8088/services/collector
 
 **SPLUNK_HEC_TOKEN**: Token for your Splunk HTTP event collector.
-To create a new token for this Lambda function, refer to Splunk Docs:
+To create a new token for this Lambda function, refer to Splunk Docs:<br/>
 http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token   
 
 <details>
