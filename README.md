@@ -275,7 +275,7 @@ Our goal is to have the Lambda function triggered by a Snyk webhook. To do this 
 </table>
       
 The settings should look like this:<br/>
-<img src="resources_img/API_gateway.png" width="2048"><br/>
+<img src="resources_img/API_gateway_config.png" width="2048"><br/>
 </details>
 	
 ### 1.5 :fire: Time to test our AWS connection :fire:
