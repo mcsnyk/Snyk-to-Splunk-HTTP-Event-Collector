@@ -390,5 +390,8 @@ If we open the <b>body</b> and <b>headers</b> fields in the message:<br/>
 </details>
 
 ## 3. Snyk Webhook Setup
-To set up the Snyk webhook we are going to use the [Snyk v1-API](https://snyk.docs.apiary.io/#reference/webhooks/webhook-collection/create-a-webhook) 
-and the inbuilt console of Apiary to do this request.   
+To set up the Snyk webhook we are going to use the [Snyk API v1](https://snyk.docs.apiary.io/#reference/webhooks/webhook-collection/create-a-webhook) 
+and the inbuilt console of Apiary to do this request. With this request done your connection from Snyk to Slack will be completed and every time there is a new vulnerability you will get a new notification!    
+
+[Follow the instructions](https://docs.snyk.io/snyk-api-info/snyk-webhooks/using-snyk-webhooks-to-connect-snyk-to-slack-with-aws-lambda/set-up-the-snyk-webhook) to set up a Snyk Webhook!
+
