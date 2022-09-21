@@ -54,7 +54,7 @@ The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. W
 The concept of a channel was introduced in HEC primarily to prevent a fast client from impeding the performance of a slow client. When you assign one channel per client, because channels are treated equally on Splunk Enterprise, one client can't affect another.<br/>
 
 In order to We need a unique identifier which we can generate for example [here](https://www.guidgenerator.com/online-guid-generator.aspx), this will make our communication unique by using this globally unique component (in this case message) identifiers.<br/>
-<img src="resources_img/uuid_generation.png" width="400"><br/><br/>
+<img src="resources_img/uuid_generation.png" width="400"><br/>
 
 ### 1.3 :fire:Test our Splunk connection:fire: 
 To test our Splunk connection, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk).
