@@ -334,7 +334,6 @@ Check if the mapping template and the code looks like this:
 <img src="resources_img/AWS_API_Getway_mapping_template.png" width="700"><br/><br/>
 </details>
 
-	
 #### 2.5.2 Deploying the POST method
 With the POST method configured now we want to deploy these changes so our Lambda can start receiving the information.<br/>
 	
@@ -345,8 +344,8 @@ Steps to deploy the POST method:<br/>
 1. Go to Resources<br/>
 2. Click on POST<br/>
 3. Then on Actions click on <b>Deploy API</b><br/>
-
 </details>
-	
+
 ### 2.6 :fire: Time to test our AWS Lambda function :fire:
 To test our AWS Lambda function, we will use <b>Postman</b> this time, as well (feel free to use your own API platform to interact with Splunk and AWS Lambda).
+
