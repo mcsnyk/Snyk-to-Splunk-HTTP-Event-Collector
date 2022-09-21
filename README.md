@@ -195,6 +195,6 @@ In our setup, the HEC URL is going to look like:
 ```
 https://prd-p-2mqiy.splunkcloud.com:8088/services/collector?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef
 ```
-You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef ``` part in the URL, you can find an [explanation here](https://cultivatingsoftware.wordpress.com/2018/07/24/splunk-hec-gotcha/).   
+You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef ``` part in the URL, you can find an explanation [here](https://cultivatingsoftware.wordpress.com/2018/07/24/splunk-hec-gotcha/) and [here](https://community.splunk.com/t5/Splunk-Enterprise/Why-am-I-getting-error-quot-Data-channel-is-missing-quot-using/td-p/280621).     
 
 
