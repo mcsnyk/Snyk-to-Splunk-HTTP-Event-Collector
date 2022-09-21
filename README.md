@@ -19,12 +19,17 @@ I recommend the following resources:
 - [1. Splunk Setup](#1-splunk-setup)<br/>
 	- [1.1 Setting up the HTTP Event Collector in Splunk Cloud](#11-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
 	- [1.2 Generate a UUID for the Splunk connection (X-Splunk-Request-Channel)](#12-generate-a-uuid-for-the-splunk-connection-x-splunk-request-channel)<br/>
-	- [1.3 Test our Splunk connection](#12-firetest-our-splunk-connectionfire)<br/>
+	- [1.3 Test our Splunk connection](#13-firetest-our-splunk-connectionfire)<br/>
 - [2. AWS Setup](#2-aws-setup)<br/>
 	- [2.1 Create a new IAM role (upfront) for the AWS Lambda function](#21-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
 	- [2.2 Create a Lambda function](#22-create-a-lambda-function)<br/>
 	- [2.3 Setting the necessary environment variables](#23-setting-the-necessary-environment-variables-for-our-aws-lambda-function)<br/>
 	- [2.4 Setting up the Lambda trigger](#24-setting-up-the-lambda-trigger)<br/>
+	- [2.5 Configuring the API Gateway](#25-configuring-the-api-gateway)<br/>
+		- [2.5.1 Setting up the method](#251-setting-up-the-method)<br/>
+		- [2.5.2 Deploying the POST method](#252-deploying-the-post-method)<br/>
+	- [2.6 Time to test our AWS Lambda function](#26-time-to-test-our-aws-lambda-function)<br/>
+
 
 ## 1. Splunk Setup
 To start with, we will set up and configure the Splunk HTTP Event Collector and test our connection before moving to AWS Lambda.<br/>  
@@ -279,6 +284,32 @@ Our goal is to have the Lambda function triggered by a Snyk webhook. To do this 
 The settings should look like this:<br/>
 <img src="resources_img/API_gateway_config.png" width="2048"><br/>
 </details>
+
+### 2.5 Configuring the API Gateway
+#### 2.5.1 Setting up the method
+The payload we are going to receive is going to have a message, so we want to create a POST method that will receive the message and verify it is a valid message and then send onwards to the Lambda.<br/>
+
+<details>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
+<br/>
+Steps to add the POST Method:<br/>
+1. Navigate to the API Gateway you have created<br/>
+2. Click on Resources<br/>
+3. We are going to create the method so go to Actions -> Create Method -> <b>POST</b><br/>
+4 .Configure it to work with the Lambda Function you created by adding it to the Lambda Function box<br/>
+</details>
 	
-### 1.5 :fire: Time to test our AWS connection :fire:
-To test our connections, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk and AWS Lambda).
+#### 2.5.2 Deploying the POST method
+With the POST method configured now we want to deploy these changes so our Lambda can start receiving the information.<br/>
+	
+<details>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
+<br/>
+Steps to deploy the POST method:<br/>
+1. Go to Resources<br/>
+2. Click on POST<br/>
+3. Then on Actions click on <b>Deploy API</b><br/>
+
+</details>
+### 2.6 :fire: Time to test our AWS Lambda function :fire:
+To test our AWS Lambda function, we will use <b>Postman</b> this time, as well (feel free to use your own API platform to interact with Splunk and AWS Lambda).
