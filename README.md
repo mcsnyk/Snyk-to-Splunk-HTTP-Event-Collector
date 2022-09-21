@@ -311,5 +311,6 @@ Steps to deploy the POST method:<br/>
 3. Then on Actions click on <b>Deploy API</b><br/>
 
 </details>
+	
 ### 2.6 :fire: Time to test our AWS Lambda function :fire:
 To test our AWS Lambda function, we will use <b>Postman</b> this time, as well (feel free to use your own API platform to interact with Splunk and AWS Lambda).
