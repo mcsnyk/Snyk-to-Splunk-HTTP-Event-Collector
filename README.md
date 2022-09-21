@@ -59,7 +59,8 @@ Parameters of the <b>POST</b> request:
 	- Content-Type: <b>application/json</b>
 	- Authorization: <b>Splunk \<your-splunk-token\></b>
 	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b><br/><br/>
-	
+
+It should look like:     
 <img src="resources_img/postman_splunk_header.png" width="1024"><br/><br/>
 - Body: Let's just use a short sentence as an <b>httpevent</b>, like:
 ```
@@ -68,6 +69,7 @@ Parameters of the <b>POST</b> request:
     "sourcetype": "httpevent"
 }	
 ```
+It should look like:     
 <img src="resources_img/postman_splunk_body.png" width="700"><br/><br/>
 	
 
