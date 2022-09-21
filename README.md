@@ -333,7 +333,7 @@ To the template add the following code:
 ```
 
 Check if the mapping template and the code looks like this:
-<img src="resources_img/AWS_API_Getway_mapping_template.png" width="700"><br/><br/>
+<img src="resources_img/AWS_API_Getway_mapping_template.png" width="700"><br/>
 </details>
 
 #### 2.5.2 Deploying the POST method
@@ -356,5 +356,20 @@ With the API endpoint saved we can now set up the Snyk webhook<br/>
 </details> 
 
 ### 2.6 :fire: Time to test our AWS Lambda function :fire:
-To test our AWS Lambda function, we will use <b>Postman</b> this time, as well (feel free to use your own API platform to interact with Splunk and AWS Lambda).
+To test our AWS Lambda function, we will use <b>Postman</b> this time, as well (feel free to use your own API platform to interact with Splunk and AWS Lambda).       
+	
+It is really easy to test our AWS Lambda endpoint. Since we have already configured Splunk and established a connection between AWS and Splunk, if we trigger our AWS Lambda, it will also appear in Splunk.     
+
+As a <b>POST</b> request we can send a short message to AWS.
+- AWS Lambda endpoint: we have already configured, [see instructions here](#252-deploying-the-post-method)
+- <b>Headers:</b> Content-Type: application/json; charset=utf-8
+- <b>Body:</b> 
+
+```json
+{
+    "event": "Snyk is great! Test message from Postman -> Lambda", 
+    "sourcetype": "httpevent"
+}
+```
+	
 
