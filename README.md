@@ -395,6 +395,6 @@ and the inbuilt console of Apiary to do this request. With this request done you
 
 [Follow the instructions](https://docs.snyk.io/snyk-api-info/snyk-webhooks/using-snyk-webhooks-to-connect-snyk-to-slack-with-aws-lambda/set-up-the-snyk-webhook) to set up a Snyk Webhook!
 
-Let's test the connection: let's retest a project in your selected Snyk org!
-If we go in Splunk to Search & Reporting >> Dashboards, we can check if we receive the new vulnerabilities:
+Let's test the connection: let's retest a project in your selected Snyk org!<br/>
+If we go in Splunk to Search & Reporting >> Dashboards, we can check if we receive the new vulnerabilities (raw data and number of H severity vulnerabilities):
 <img src="resources_img/snyk_splunk_dashboard_example.png" width="2048"><br/>
