@@ -58,7 +58,8 @@ Parameters of the <b>POST</b> request:
 - Headers:
 	- Content-Type: <b>application/json</b>
 	- Authorization: <b>Splunk \<your-splunk-token\></b>
-	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b><br/>
+	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b><br/><br/>
+	
 <img src="resources_img/postman_splunk_header.png" width="1024"><br/><br/>
 - Body: Let's just use a short sentence as an <b>httpevent</b>, like:
 ```
@@ -67,9 +68,8 @@ Parameters of the <b>POST</b> request:
     "sourcetype": "httpevent"
 }	
 ```
-<img src="resources_img/postman_splunk_body.png" width="1024"><br/><br/>
+<img src="resources_img/postman_splunk_body.png" width="700"><br/><br/>
 	
- 
 
 ## 2. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
