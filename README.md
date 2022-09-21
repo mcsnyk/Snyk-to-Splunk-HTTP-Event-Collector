@@ -360,6 +360,8 @@ To test our AWS Lambda function, we will use <b>Postman</b> this time, as well (
 	
 It is really easy to test our AWS Lambda endpoint. Since we have already configured Splunk and established a connection between AWS and Splunk, if we trigger our AWS Lambda, it will also appear in Splunk.     
 
+<details>
+<summary><b>:hammer_and_wrench: Test steps</b></summary>
 As a <b>POST</b> request we can send a short message to AWS.
 - AWS Lambda endpoint: we have already configured, [see instructions here](#252-deploying-the-post-method)
 - <b>Headers:</b> Content-Type: application/json; charset=utf-8
@@ -385,4 +387,4 @@ Let's check Splunk (Search & Reporting):<br/>
 <img src="resources_img/postman_aws_response_splunk_1.png" width="800"><br/>
 If we open the <b>body</b> and <b>headers</b> fields in the message:<br/>
 <img src="resources_img/postman_aws_response_splunk_o.png" width="800"><br/>
-
+</details>
