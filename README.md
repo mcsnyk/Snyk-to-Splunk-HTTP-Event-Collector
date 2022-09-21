@@ -78,8 +78,15 @@ It should look like:
 }	
 ```
 It should look like:     
-<img src="resources_img/postman_splunk_body.png" width="700"><br/><br/>
+<img src="resources_img/postman_splunk_body.png" width="700"><br/>
+
+After sending the POST request, we should see in Postman:
+<img src="resources_img/postman_splunk_success.png" width="700"><br/>
 	
+need to navigate to the Search & Reporting site in Splunk Cloud:
+<img src="resources_img/splunk_ping_success.png" width="2048"><br/>
+
+We shall start a new search, into the search field we need to enter ``` source="http:<name-of-your-http-event-token>" (index="main")```
 
 ## 2. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
