@@ -29,7 +29,7 @@ I recommend the following resources:
 		- [2.5.1 Setting up the method](#251-setting-up-the-method)<br/>
 		- [2.5.2 Deploying the POST method](#252-deploying-the-post-method)<br/>
 	- [2.6 Time to test our AWS Lambda function](#26-fire-time-to-test-our-aws-lambda-function-fire)<br/>
-
+- [3. Snyk Webhook Setup](#3-snyk-webhook-setup)<br/>
 
 ## 1. Splunk Setup
 To start with, we will set up and configure the Splunk HTTP Event Collector and test our connection before moving to AWS Lambda.<br/>  
@@ -388,3 +388,7 @@ Let's check Splunk (Search & Reporting):<br/>
 If we open the <b>body</b> and <b>headers</b> fields in the message:<br/>
 <img src="resources_img/postman_aws_response_splunk_o.png" width="800"><br/>
 </details>
+
+## 3. Snyk Webhook Setup
+To set up the Snyk webhook we are going to use the [Snyk v1-API](https://snyk.docs.apiary.io/#reference/webhooks/webhook-collection/create-a-webhook) 
+and the inbuilt console of Apiary to do this request.   
