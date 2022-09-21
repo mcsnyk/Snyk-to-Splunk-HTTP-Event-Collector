@@ -15,19 +15,50 @@ I recommend the following resources:
 - Splunk Clound account - note: **not the same** as Splunk Observability Cloud!<br/>
 
 ## List of content
-- [1. AWS Setup](#1-aws-setup)<br/>
-	- [1.1 Create a new IAM role (upfront) for the AWS Lambda function](#11-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
-	- [1.2 Create a Lambda function](#12-create-a-lambda-function)<br/>
-	- [1.3 Setting up the HTTP Event Collector in Splunk Cloud](#13-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
-	- [1.4 Setting the necessary environment variables](#14-setting-the-necessary-environment-variables-for-our-aws-lambda-function)<br/>
-- 
-## 1. AWS Setup
+- [1. Splunk Setup](#1-splunk-setup)<br/>
+	- [1.1 Setting up the HTTP Event Collector in Splunk Cloud](#11-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
+	- [1.2 Test our Splunk connection](#12-firetest-our-splunk-connectionfire)<br/>
+- [2. AWS Setup](#2-aws-setup)<br/>
+	- [2.1 Create a new IAM role (upfront) for the AWS Lambda function](#21-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
+	- [2.2 Create a Lambda function](#22-create-a-lambda-function)<br/>
+	- [2.3 Setting the necessary environment variables](#23-setting-the-necessary-environment-variables-for-our-aws-lambda-function)<br/>
+
+## 1. Splunk Setup
+To start with, we will set up and configure the Splunk HTTP Event Collector and test our connection before moving to AWS Lambda.<br/>  
+
+### 1.1 Setting up the HTTP Event Collector in Splunk Cloud    
+Our intention is to get data in Splunk Cloud via monitoring. We'll leverage the Splunk HTTP Event Collector, which is an endpoint that lets developers send application events directly to the Splunk platform via HTTP or HTTPS using a token-based authentication model.<br/>  
+It's a handy solution, because we can use the Splunk .NET and Java logging libraries or any standard HTTP Client that lets us send data in JavaScript Object Notation (JSON) format.<br/>       
+The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. We can change this port, as well as disable HTTPS.<br/>  
+
+<details>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
+<br/>
+1. Log in to your <b>Splunk Cloud account</b> (you receive the login information via email, like the Splunk Cloud Platform URL, the Username and a Temporary Password)<br/>
+<img src="resources_img/splunk_login_information.png" width="400"><br/><br/>
+2. After a succesful log in, navigate to <b>Settings</b> in the top menu bar and select the Add Data icon!<br/>
+<img src="resources_img/splunk_add_data.png" width="400"><br/><br/>
+3. In the <b>Or get data in with the following methods </b> section choose Monitor<br/><br/>
+4. Among the many options choose <b>HTTP Event Collector</b><br/><br/>
+5. Give a name for your Token and make sure that the option <b>Enable indexer acknowledgement</b> is selected!<br/>
+<img src="resources_img/splunk_httpec_setup.png" width="1024"><br/><br/>
+6. On the Input Settings site the source type should be <b>automatic</b>, and we can allow the <b>main </b>index (The Splunk platform stores incoming data as events in the selected index):<br/>
+<img src="resources_img/splunk_allow_main_index.png" width="1024"><br/><br/>
+7. After reviewing all the information, we're done, you should see the generated Token Value (in this setup on AWS Lambda it is called <b>SPLUNK_HEC_TOKEN</b>):<br/>
+<img src="resources_img/splunk_generated_token.png" width="800"><br/><br/>
+</details>
+
+### 1.2 :fire:Test our Splunk connection:fire: 
+To test our Splunk connection, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk).
+
+
+## 2. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
 
 Note: The AWS Lambda function and the API Gateway have to be configured in the same region.   
 We are going to use AWS Lambda, because it's a relatively cost-effective and efficient way to run code on events, for example when there is a new Snyk vulnerability.
 
-### 1.1 Create a new IAM role (upfront) for the AWS Lambda function
+### 2.1 Create a new IAM role (upfront) for the AWS Lambda function
 To start with, we need to create an IAM role that we can assign to the AWS Lambda function. We need to provide basic execution roles and permissions to invoke an API Gateway which we'll be interacting with. If you're interested in the implementation, click below.  
 <details>
 <summary><b>:hammer_and_wrench: Implementation steps</b></summary>
@@ -115,7 +146,7 @@ You can check, your roles should look like these (AWS build-in roles)
 }
 ```
 
-### 1.2 Create a Lambda function
+### 2.2 Create a Lambda function
 ---
 :genie: **The fastest and most convenient way is to go to [Splunk's development site](https://dev.splunk.com/enterprise/docs/devtools/httpeventcollector/useawshttpcollector/createlambdafunctionnodejs/) and create a Lambda function using a Splunk blueprint:** select the "splunk-logging" blueprint option, or click [here to immediate action within AWS Lambda](https://console.aws.amazon.com/lambda/home?#/create/configure-triggers?bp=splunk-logging)
 
@@ -146,28 +177,6 @@ Alternatively, of course we can create own our JavaScript code as described belo
 
 The configuration should look like this:
 <img src="resources_img/create_lambda_function.png" width="2048">
-</details>
-
-### 1.3 Setting up the HTTP Event Collector in Splunk Cloud
-Our intention is to get data in Splunk Cloud via monitoring. We'll leverage the Splunk HTTP Event Collector, which is an endpoint that lets developers send application events directly to the Splunk platform via HTTP or HTTPS using a token-based authentication model.<br/>  
-It's a handy solution, because we can use the Splunk .NET and Java logging libraries or any standard HTTP Client that lets us send data in JavaScript Object Notation (JSON) format.<br/>       
-The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. We can change this port, as well as disable HTTPS.<br/>  
-
-<details>
-<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
-<br/>
-1. Log in to your <b>Splunk Cloud account</b> (you receive the login information via email, like the Splunk Cloud Platform URL, the Username and a Temporary Password)<br/>
-<img src="resources_img/splunk_login_information.png" width="400"><br/><br/>
-2. After a succesful log in, navigate to <b>Settings</b> in the top menu bar and select the Add Data icon!<br/>
-<img src="resources_img/splunk_add_data.png" width="400"><br/><br/>
-3. In the <b>Or get data in with the following methods </b> section choose Monitor<br/><br/>
-4. Among the many options choose <b>HTTP Event Collector</b><br/><br/>
-5. Give a name for your Token and make sure that the option <b>Enable indexer acknowledgement</b> is selected!<br/>
-<img src="resources_img/splunk_httpec_setup.png" width="1024"><br/><br/>
-6. On the Input Settings site the source type should be <b>automatic</b>, and we can allow the <b>main </b>index (The Splunk platform stores incoming data as events in the selected index):<br/>
-<img src="resources_img/splunk_allow_main_index.png" width="1024"><br/><br/>
-7. After reviewing all the information, we're done, you should see the generated Token Value (in this setup on AWS Lambda it is called <b>SPLUNK_HEC_TOKEN</b>):<br/>
-<img src="resources_img/splunk_generated_token.png" width="800"><br/><br/>
 </details>
 
 ### 1.4 Setting the necessary environment variables for our AWS Lambda function
