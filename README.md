@@ -307,8 +307,17 @@ Steps to add the POST Method:<br/><br/>
 5. Click on the new <b>POST</b> method<br/>
 6. Go to the top right and click on <b>Integration Request</b><br/>
 <img src="resources_img/AWS_API_Getway_post.png" width="700"><br/><br/>
-7. Scroll to the bottom and add a mapping template with application/json Content type. To the template add the following code:<br/>
-```json
+7. Scroll to the bottom and add a mapping template with application/json Content type.<br/>
+			</td>
+			</tr>
+		</tbody>
+	</table>
+</details>
+<details>
+<summary><b>:hammer_and_wrench: To the template add the following code</b></summary>
+<br/>
+				
+```
 {
     "method": "$context.httpMethod",
     "body" : $input.json('$'),
@@ -318,15 +327,10 @@ Steps to add the POST Method:<br/><br/>
         #if($foreach.hasNext),#end
         #end
     }
-}		
+}
 ```
-				
-				</td>
-			</tr>
-		</tbody>
-	</table>
 </details>
-
+<br/>
 	
 #### 2.5.2 Deploying the POST method
 With the POST method configured now we want to deploy these changes so our Lambda can start receiving the information.<br/>
