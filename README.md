@@ -63,7 +63,7 @@ Parameters of the <b>POST</b> request:
 It should look like:     
 <img src="resources_img/postman_splunk_header.png" width="1024"><br/><br/>
 - Body: Let's just use a short sentence as an <b>httpevent</b>, like:
-```
+```json
 {
     "event": "Let's ping Splunk", 
     "sourcetype": "httpevent"
