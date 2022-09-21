@@ -241,7 +241,7 @@ http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector
 <b>SPLUNK_HEC_TOKEN</b> and <b>SPLUNK_HEC_URL</b>.<br/><br/>
 - We have already generated our <a href="https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/README.md#13-setting-up-the-http-event-collector-in-splunk-cloud">Splunk Token in 1.3, Step 7 </a>which we can use now.<br/><br/>
 - When configuring the URL we need to pay attention to the [following configurations](https://community.splunk.com/t5/Getting-Data-In/What-is-the-URI-for-HTTP-Event-Collector-for-Splunk-Cloud/m-p/425704
-</details>
+
 
 In our setup, the HEC URL is going to look like:
 ```
@@ -251,7 +251,9 @@ You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef
 
 The settings should look like this:<br/>
 <img src="resources_img/AWS_env_var.png" width="2048"><br/>
-     
+</details>
+
+
 ### 2.4 Setting up the Lambda trigger
 Our goal is to have the Lambda function triggered by a Snyk webhook. To do this we are going to use the API Gateway provided by AWS to trigger the Lambda every time a new event is received.
 
