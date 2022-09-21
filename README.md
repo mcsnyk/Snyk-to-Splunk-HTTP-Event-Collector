@@ -292,11 +292,20 @@ The payload we are going to receive is going to have a message, so we want to cr
 <details>
 <summary><b>:hammer_and_wrench: Implementation steps</b></summary>
 <br/>
+<table border="0">
+	<tbody>
+		<tr>
+			<td> <img src="resources_img/amazon-api-gateway.png" width="130"></td>
+			<td>
 Steps to add the POST Method:<br/>
 1. Navigate to the API Gateway you have created<br/>
 2. Click on Resources<br/>
 3. We are going to create the method so go to Actions -> Create Method -> <b>POST</b><br/>
 4 .Configure it to work with the Lambda Function you created by adding it to the Lambda Function box<br/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </details>
 	
 #### 2.5.2 Deploying the POST method
