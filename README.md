@@ -263,7 +263,7 @@ Our goal is to have the Lambda function triggered by a Snyk webhook. To do this 
 1. Go to the AWS Console if you are not there, pay attention to be in the right region!<br/><br/>
 2. Navigate to the function and click on Add Trigger<br/><br/>
 3. Select API Gateway as trigger<br/><br/>
-4. Configure the API Gateway as per the image<br/><br/>  
+4. Configure the API Gateway: create a <b>new</b> API (Intent), a <b>REST API</b> with an <b>API key</b> as for the security mechanism. Give the API a <b>name</b>, and select <b>default</b> as the name of the deployment stage.   
 			</td>
 		</tr>
 	</tbody>
