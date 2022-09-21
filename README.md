@@ -226,7 +226,7 @@ The configuration should look like this:
 In order to interact with Splunk and the Splunk HTTP event collector, we need to set two environment variables in AWS Lambda:
 
 **SPLUNK_HEC_URL**: URL address for your Splunk HTTP event collector endpoint.
-Default port for event collector is 8088. Example: https://host.com:8088/services/collector
+Default port for event collector is 8088. <br/>Example: https://host.com:8088/services/collector
 
 **SPLUNK_HEC_TOKEN**: Token for your Splunk HTTP event collector.
 To create a new token for this Lambda function, refer to Splunk Docs:<br/>
