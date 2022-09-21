@@ -58,7 +58,7 @@ exports.handler = (event, context, callback) => {
             callback(error);
         } else {
             console.log(`Response from Splunk:\n${response}`);
-            callback(null, event.key1); // Echo back the first key value
+            callback("Snyk is great! Test message from AWS Lambda -> Postman", event.key1); // Echo back the first key value
         }
     });
 };
