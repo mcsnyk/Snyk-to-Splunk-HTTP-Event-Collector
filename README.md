@@ -313,10 +313,12 @@ Steps to add the POST Method:<br/><br/>
 		</tbody>
 	</table>
 </details>
+	
 <details>
 <summary><b>:hammer_and_wrench: Mapping template code</b></summary>
 <br/>
-To the template add the following code:				
+To the template add the following code:	
+	
 ```
 {
     "method": "$context.httpMethod",
