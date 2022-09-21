@@ -301,7 +301,7 @@ Steps to add the POST Method:<br/><br/>
 1. Navigate to the API Gateway you have created<br/>
 2. Click on Resources<br/>
 3. We are going to create the method so go to Actions -> Create Method -> <b>POST</b><br/>
-<img src="resources_img/AWS_API_Getway_create_method.png" width="800"><br/><br/>
+<img src="resources_img/AWS_API_Getway_create_method.png" width="600"><br/><br/>
 4. Configure it to work with the Lambda Function you created by adding it to the Lambda Function box<br/>
 <img src="resources_img/AWS_API_Getway_setup.png" width="800">
 				</td>
