@@ -50,7 +50,26 @@ The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. W
 
 ### 1.2 :fire:Test our Splunk connection:fire: 
 To test our Splunk connection, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk).
+I recommend to create a new collection in Splunk, and put all the requests there.
 
+Parameters of the <b>POST</b> request:
+- As a URL, let's use ``` https://prd-p-2mqiy.splunkcloud.com:8088/services/collector ```
+- Authorization type: <b>No Auth</b>
+- Headers:
+	- Content-Type: <b>application/json</b>
+	- Authorization: <b>Splunk \<your-splunk-token\></b>
+	- X-Splunk-Request-Channel: <b>\<the generated UUID\></b>
+<img src="resources_img/postman_splunk_header.png" width="1024"><br/><br/>
+- Body: Let's just use a short sentence as an <b>httpevent</b>, like:
+```
+{
+    "event": "Let's ping Splunk", 
+    "sourcetype": "httpevent"
+}	
+```
+<img src="resources_img/postman_splunk_body.png" width="1024"><br/><br/>
+	
+ 
 
 ## 2. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
