@@ -1,4 +1,4 @@
-# Snyk-to-Splunk using the Splunk HTTP-Event-Collector
+# Snyk-to-Splunk integration using the Splunk HTTP-Event-Collector
 Connect Snyk to Splunk by leveraging the Splunk HTTP Event Collector and visualise your vulns to Splunk.   
 
 ## Useful resources   
