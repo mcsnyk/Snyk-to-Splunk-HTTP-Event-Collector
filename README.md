@@ -17,6 +17,7 @@ I recommend the following resources:
 ## List of content
 - [1. Splunk Setup](#1-splunk-setup)<br/>
 	- [1.1 Setting up the HTTP Event Collector in Splunk Cloud](#11-setting-up-the-http-event-collector-in-splunk-cloud)<br/>
+	- [1.2 Generate a UUID for the Splunk connection (X-Splunk-Request-Channel)](#12-generate-a-uuid-for-the-splunk-connection-x-splunk-request-channel)<br/>
 	- [1.3 Test our Splunk connection](#12-firetest-our-splunk-connectionfire)<br/>
 - [2. AWS Setup](#2-aws-setup)<br/>
 	- [2.1 Create a new IAM role (upfront) for the AWS Lambda function](#21-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
