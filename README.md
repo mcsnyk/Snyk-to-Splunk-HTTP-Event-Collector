@@ -90,7 +90,7 @@ We shall start a new search, into the search field we need to enter ``` source="
 Fortunately we turned on the indexing option when setting up the HTTP Event Collector, now it's easy to find our messages.<br/><br/>
 <img src="resources_img/splunk_ping_success.png" width="2048"><br/>
 
-As we can see, Splunk successfully received our message.     
+As we can see, Splunk successfully received our message. Now we can set up and configure our AWS Lambda finction.    
 	
 ## 2. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
