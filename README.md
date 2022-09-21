@@ -384,5 +384,5 @@ Let's check Postman:<br/>
 Let's check Splunk (Search & Reporting):<br/>
 <img src="resources_img/postman_aws_response_splunk_1.png" width="800"><br/>
 If we open the <b>body</b> and <b>headers</b> fields in the message:<br/>
-<img src="resources_img/postman_aws_response_splunk_2.png" width="800"><br/>
+<img src="resources_img/postman_aws_response_splunk_o.png" width="800"><br/>
 
