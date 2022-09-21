@@ -24,6 +24,7 @@ I recommend the following resources:
 	- [2.1 Create a new IAM role (upfront) for the AWS Lambda function](#21-create-a-new-iam-role-upfront-for-the-aws-lambda-function)<br/>
 	- [2.2 Create a Lambda function](#22-create-a-lambda-function)<br/>
 	- [2.3 Setting the necessary environment variables](#23-setting-the-necessary-environment-variables-for-our-aws-lambda-function)<br/>
+	- [2.4 Setting up the Lambda trigger](#24-setting-up-the-lambda-trigger)<br/>
 
 ## 1. Splunk Setup
 To start with, we will set up and configure the Splunk HTTP Event Collector and test our connection before moving to AWS Lambda.<br/>  
