@@ -57,9 +57,11 @@ In order to We need a unique identifier which we can generate for example [here]
 <img src="resources_img/uuid_generation.png" width="400"><br/>
 
 ### 1.3 :fire:Test our Splunk connection:fire: 
-To test our Splunk connection, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk).
+To test our Splunk connection, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk).      
 I recommend to create a new collection in Splunk, and put all the requests there.
 
+<details>
+<summary><b>:hammer_and_wrench: Test steps</b></summary>
 Parameters of the <b>POST</b> request:
 - As a URL, let's use ``` https://prd-p-2mqiy.splunkcloud.com:8088/services/collector ```
 - Authorization type: <b>No Auth</b>
@@ -91,6 +93,7 @@ Fortunately we turned on the indexing option when setting up the HTTP Event Coll
 <img src="resources_img/splunk_ping_success.png" width="2048"><br/>
 
 As we can see, Splunk successfully received our message. Now we can set up and configure our AWS Lambda finction.    
+</details>
 	
 ## 2. AWS Setup
 In this section, I'll show you how to configure AWS in order to send data towards Splunk, as well as the background of the 5 implementation steps.
