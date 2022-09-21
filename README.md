@@ -371,5 +371,10 @@ As a <b>POST</b> request we can send a short message to AWS.
     "sourcetype": "httpevent"
 }
 ```
-	
+
+What we expect is the callback message from AWS Lambda:
+
+```json
+callback("Snyk is great! Test message from AWS Lambda -> Postman", event.key1);
+```
 
