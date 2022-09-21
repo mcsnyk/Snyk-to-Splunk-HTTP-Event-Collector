@@ -222,7 +222,7 @@ The configuration should look like this:
 <img src="resources_img/create_lambda_function.png" width="2048">
 </details>
 
-### 1.4 Setting the necessary environment variables for our AWS Lambda function
+### 2.3 Setting the necessary environment variables for our AWS Lambda function
 In order to interact with Splunk and the Splunk HTTP event collector, we need to set two environment variables in AWS Lambda:
 
 **SPLUNK_HEC_URL**: URL address for your Splunk HTTP event collector endpoint.
@@ -249,7 +249,26 @@ https://prd-p-2mqiy.splunkcloud.com:8088/services/collector?channel=2b5fcd04-f37
 ```
 You might ask, why we need the ``` ?channel=2b5fcd04-f37e-4484-9610-8ea31cb510ef ``` part in the URL, you can find an explanation [here](https://cultivatingsoftware.wordpress.com/2018/07/24/splunk-hec-gotcha/) and [here](https://community.splunk.com/t5/Splunk-Enterprise/Why-am-I-getting-error-quot-Data-channel-is-missing-quot-using/td-p/280621).
      
+### 2.4 Setting up the Lambda trigger
+Our goal is to have the Lambda function triggered by a Snyk webhook. To do this we are going to use the API Gateway provided by AWS to trigger the Lambda every time a new event is received.
 
+<details>
+<summary><b>:hammer_and_wrench: Implementation steps</b></summary>
+<br/>
+<table border="0">
+	<tbody>
+		<tr>
+			<td> <img src="resources_img/API_gateway.png" width="130"></td>
+			<td>
+1. Go to the AWS Console if you are not there, pay attention to be in the right region!<br/><br/>
+2. Navigate to the function and click on Add Trigger<br/><br/>
+3. Select API Gateway as trigger<br/><br/>
+4. Configure the API Gateway as per the image<br/><br/>  
+			</td>
+		</tr>
+	</tbody>
+</table>
 
-### 1.5 :fire: Time to test our connections :fire:
+</details>
+### 1.5 :fire: Time to test our AWS connection :fire:
 To test our connections, we will use <b>Postman</b> this time (feel free to use your own API platform to interact with Splunk and AWS Lambda).
