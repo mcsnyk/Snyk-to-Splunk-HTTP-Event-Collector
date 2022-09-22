@@ -43,7 +43,7 @@ The HTTP Event Collector receives data over HTTPS on TCP port 8088 by default. W
 <summary><b>:hammer_and_wrench: Implementation steps</b></summary>
 <br/>
 1. Log in to your <b>Splunk Cloud account</b> (you receive the login information via email, like the Splunk Cloud Platform URL, the Username and a Temporary Password)<br/>
-<img src="resources_img/splunk_login_information.png" width="400"><br/><br/>
+<img src="resources_img/splunk_login_information_g.png" width="400"><br/><br/>
 2. After a succesful log in, navigate to <b>Settings</b> in the top menu bar and select the Add Data icon!<br/>
 <img src="resources_img/splunk_add_data.png" width="400"><br/><br/>
 3. In the <b>Or get data in with the following methods </b> section choose Monitor<br/><br/>
