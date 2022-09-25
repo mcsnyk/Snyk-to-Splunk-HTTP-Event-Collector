@@ -36,9 +36,9 @@ def get_code_issues(client: httpx.Client, org_id: str, proj_id: str, severity: s
 def main():
     """Main function."""
 
-    SNYK_TOKEN = "c2b041c2-d022-49be-b309-95b9b1b12241"  # Snyk personal API Token
-    ORG_ID = "6391f850-81f8-48fc-9cd4-aa8c186c6ff0"  # Snyk Org.ID storybooks
-    PROJ_ID = "71f558ae-894e-4ff9-8656-55840e0fc78a"  # Snyk storybooks Code Analysis
+    SNYK_TOKEN = "..."  # Snyk personal API Token
+    ORG_ID = "..."  # Snyk Org.ID storybooks
+    PROJ_ID = "..."  # Snyk storybooks Code Analysis
     SEVERITY = "high"  # severity of the code issues
 
     client = create_client(base_url="https://api.snyk.io/rest/", token=SNYK_TOKEN)
