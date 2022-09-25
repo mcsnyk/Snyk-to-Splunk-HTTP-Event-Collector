@@ -30,7 +30,7 @@ I recommend the following resources:
 		- [2.5.2 Deploying the POST method](#252-deploying-the-post-method)<br/>
 	- [2.6 Time to test our AWS Lambda function](#26-fire-time-to-test-our-aws-lambda-function-fire)<br/>
 - [3. Snyk Webhook Setup](#3-snyk-webhook-setup)<br/>
-- [Get and display code issues](#4-get-and-display-code-issues)<br/>
+- [4. Get and display code issues](#4-get-and-display-code-issues)<br/>
 
 ## 1. Splunk Setup
 To start with, we will set up and configure the Splunk HTTP Event Collector and test our connection before moving to AWS Lambda.<br/>  
