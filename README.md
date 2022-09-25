@@ -417,4 +417,4 @@ curl --location --request POST 'your AWS Lambda endpoint' \
 --data @code_results.json
 ```
       
-Feel free to use the scripts **rest-get-code-issues.sh** and **rest-get-code-issues.py**
+Feel free to use the scripts [**rest-get-code-issues.sh**](https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/scripts/Rest-API-get-code-issues/rest_api_code_issues.sh) and [**rest-get-code-issues.py**](https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/scripts/Rest-API-get-code-issues/rest_api_code_issues.py)
