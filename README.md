@@ -402,7 +402,7 @@ If we go in Splunk to Search & Reporting >> Dashboards, we can check if we recei
 
 ## 4. Get and display code issues   
 At the moment it only works in two steps:   
-- We have to pull code issues (of a given Snyk Project) vial the Snyk REST API. Make sure to use the [right version of the API **(2022-04-06~experimental)**](https://apidocs.snyk.io/?version=2022-04-06%7Eexperimental#get-/orgs/-org_id-/issues)  <br/>
+- We have to pull code issues (of a given Snyk Project) vial the Snyk REST API. Make sure to use the [right version of the API **(2022-04-06~experimental)**](https://apidocs.snyk.io/?version=2022-04-06%7Eexperimental#get-/orgs/-org_id-/issues)<br/>
 
 ```
 curl --request GET "https://api.snyk.io/rest/orgs/{orgID}/issues?project_id={projID}&severity=high&type=code&version=2022-04-06%7Eexperimental" \
@@ -410,7 +410,7 @@ curl --request GET "https://api.snyk.io/rest/orgs/{orgID}/issues?project_id={pro
 --header "Authorization: Token {your Snyk Token}" | tee code_results.json
 ```
 
-- Then we have to create a POST request to send the pulled data towards AWS Lambda
+- Then we have to create a POST request to send the pulled data towards AWS Lambda: 
 ```
 curl --location --request POST 'your AWS Lambda endpoint' \
 --header 'Content-Type: application/json' \
