@@ -24,7 +24,6 @@ curl --location --request POST 'https://vxy2zw7203.execute-api.us-west-2.amazona
 --header 'Content-Type: application/json' \
 --data @code_results_med.json
 
-
 # HIGH SEVERITY ISSUES
 curl --request GET "https://api.snyk.io/rest/orgs/3ee0d99d-1651-4b78-b9a4-a2658bd1815e/issues?project_id=7107beaa-3011-4821-bb2a-bb0e4226b731&severity=high&type=code&version=2022-04-06%7Eexperimental" \
 --header "Accept: application/vnd.api+json" \
