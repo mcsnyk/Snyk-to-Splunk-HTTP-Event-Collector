@@ -420,4 +420,4 @@ curl --location --request POST 'your AWS Lambda endpoint' \
 Feel free to use the scripts [**rest-get-code-issues.sh**](https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/scripts/Rest-API-get-code-issues/rest_api_code_issues.sh) and [**rest-get-code-issues.py**](https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/scripts/Rest-API-get-code-issues/rest-get-code-issues.py)
 
 We can create dashboards like this in Splunk:<br/>
-<img src="resources_img/code-dashboard-splunk.png" width="2048"><br/>
+<img src="resources_img/code-dashboard-splunk2.png" width="2048"><br/>
