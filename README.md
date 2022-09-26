@@ -421,3 +421,4 @@ Feel free to use the scripts [**rest-get-code-issues.sh**](https://github.com/mc
 
 We can create dashboards like this in Splunk:<br/>
 <img src="resources_img/code-dashboard-splunk2.png" width="2048"><br/>
+<img src="resources_img/code-dashboard-splunk3.png" width="2048"><br/>
