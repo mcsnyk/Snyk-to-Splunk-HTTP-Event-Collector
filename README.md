@@ -247,7 +247,7 @@ http://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector
 2. Click on <b>Environment</b> variables<br/><br/>
 3. Add new environment variables (if you created the Lambda function on your own and didn't use the Splunk blueprint): <br/>
 <b>SPLUNK_HEC_TOKEN</b> and <b>SPLUNK_HEC_URL</b>.<br/><br/>
-- We have already generated our <a href="https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/README.md#13-setting-up-the-http-event-collector-in-splunk-cloud">Splunk Token in 1.3, Step 7 </a>which we can use now.<br/><br/>
+- We have already generated our <a href="https://github.com/mcsnyk/Snyk-to-Splunk-HTTP-Event-Collector/blob/main/README.md#11-setting-up-the-http-event-collector-in-splunk-cloud">Splunk Token</a> which we can use now.<br/><br/>
 - When configuring the URL we need to pay attention to the [following configurations](https://community.splunk.com/t5/Getting-Data-In/What-is-the-URI-for-HTTP-Event-Collector-for-Splunk-Cloud/m-p/425704
 
 
